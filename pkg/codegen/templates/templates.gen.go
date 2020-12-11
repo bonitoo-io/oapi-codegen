@@ -380,7 +380,9 @@ func Parse{{genResponseTypeName $opid | ucFirst}}(rsp *http.Response) (*{{genRes
 
     response := {{genResponsePayload $opid}}
 
+    switch {
     {{genResponseUnmarshal .}}
+    }
 
     return response, nil
 }
