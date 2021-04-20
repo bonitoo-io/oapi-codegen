@@ -1,6 +1,0 @@
-// Defines values for {{.TypeName}}.
-const (
-{{range $index, $value := .Schema.EnumValues}}
-  {{$index}} {{$.TypeName}} = {{$.ValueWrapper}}{{$value}}{{$.ValueWrapper}}
-{{end}}
-)
